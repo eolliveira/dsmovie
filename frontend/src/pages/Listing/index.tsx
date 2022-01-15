@@ -1,6 +1,10 @@
+import Pagination from "components/Pagination";
+
 const Listing = () => {
-    return(
-        <div>LISTA DE FILMES</div>
+    return (
+        <>
+            <Pagination />
+        </>
     );
 }
 
