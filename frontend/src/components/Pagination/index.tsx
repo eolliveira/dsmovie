@@ -6,7 +6,7 @@ const Pagination = () => {
     return (
         <div className='dsmovie-content'>
             <div className="pagination dsmovie-pagination-content">
-                <button className="dsmovie-previous">
+                <button className="dsmovie-previous" >
                     <img src={ArrowLeft} alt="previous" />
                 </button>
                 <p className='dsmovie-page'>1 de 3</p>

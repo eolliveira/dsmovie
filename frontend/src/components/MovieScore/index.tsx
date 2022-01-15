@@ -1,13 +1,18 @@
 import MovieStars from 'components/MovieStars';
-import './styles.css'
+import './styles.css';
+
+const assessment = {
+    score: 3.45,
+    count: 13
+}
 
 const MovieScore = () => {
     return (
         <div className='teste'>
             <div className='dsmovie-score-content'>
-                <p className='dsmovie-score'>3.8</p>
+                <p className='dsmovie-score'>{assessment.score > 0 ? assessment.score.toFixed(1) : ' - '}</p>
                 <MovieStars />
-                <p className='dsmovie-avaliacoes'>12 avaliações</p>
+                <p className='dsmovie-avaliacoes'>{`${assessment.count} avaliações`}</p>
             </div>
         </div>
 
