@@ -1,0 +1,22 @@
+.dsmovie-score-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 132px;
+    height: 62px;
+    display: flex;
+    text-align: center;
+}
+
+.dsmovie-score {
+    font-size: 16px;
+    font-weight: 700;color: #FFBB3A;
+    margin-bottom: 0;
+}
+
+.dsmovie-avaliacoes {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    color: #989898;
+}

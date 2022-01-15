@@ -1,0 +1,6 @@
+.dsmovie-stars-content {
+    display: flex;
+    width: 132px;
+    justify-content: space-between;
+}
+

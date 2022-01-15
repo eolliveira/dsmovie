@@ -2,6 +2,7 @@ import Navbar from "components/Navbar";
 import Form from "pages/Form";
 import Listing from "pages/Listing";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import './App.css'
 
 const App = () => {
   return (
