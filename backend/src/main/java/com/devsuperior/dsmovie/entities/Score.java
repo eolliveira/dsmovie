@@ -8,8 +8,8 @@ import java.io.Serializable;
 public class Score implements Serializable {
 
     @EmbeddedId
-    ScorePK id = new ScorePK();
-    Double value;
+    private ScorePK id = new ScorePK();
+    private Double value;
 
     public Score() {
     }
