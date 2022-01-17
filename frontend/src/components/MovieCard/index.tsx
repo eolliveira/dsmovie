@@ -12,7 +12,7 @@ const MovieCard = ( { movie } : Props ) => {
         <div className="card dsmovie-card mt-4 mb-5">
             <img className="card-img-top rounded-top" src={movie.image} alt="" />
             <p className="dsmovie-card-title mt-3">{movie.title}</p>
-            <MovieScore />
+            <MovieScore count={movie.count} score={movie.score} />
             <Link to={`/form/${movie.id}`} className='dsmovie-btn-avaliar'>Avaliar</Link>
         </div>
     );

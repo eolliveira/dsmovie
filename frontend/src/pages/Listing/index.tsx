@@ -32,7 +32,7 @@ const Listing = () => {
                 <div className="row">
                     {page.content?.map(movie => (
                         <div className="col-sm-6 col-lg-4 col-xl-3">
-                            <MovieCard movie={movie} />
+                            <MovieCard movie={movie} key={movie.id} />
                         </div>
                     ))}
                 </div>
