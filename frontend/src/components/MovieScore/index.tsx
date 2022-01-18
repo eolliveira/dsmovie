@@ -7,9 +7,6 @@ type Props = {
 }
 
 const MovieScore = ({ score, count }: Props) => {
-    console.log(score);
-    console.log(count);
-
     return (
         <div className='teste'>
             <div className='dsmovie-score-content'>

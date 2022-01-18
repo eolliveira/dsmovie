@@ -7,6 +7,8 @@ import { BASE_URL } from "utils/Requests";
 
 const Listing = () => {
 
+    const [activePage, setActivePage] = useState(0);
+
     const [page, setPage] = useState<MoviePage>({
         last: true,
         totalPages: 0,
@@ -16,23 +18,27 @@ const Listing = () => {
     });
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/movies?size=12`)
+        axios.get(`${BASE_URL}/movies?size=12&page=${activePage}`)
             .then((response) => {
                 setPage(response.data);
             })
             .catch((error) => {
                 console.log(`Não foi possivel obter a lista de filmes: ${error}`);
             });
-    }, []);
+    }, [activePage]);
+
+    const ChangePage = (index : number) => {
+        setActivePage(index)
+    }
 
     return (
         <>
-            <Pagination />
+            <Pagination page={page} onChangePage={ChangePage} />
             <div className="container">
                 <div className="row">
                     {page.content?.map(movie => (
-                        <div className="col-sm-6 col-lg-4 col-xl-3">
-                            <MovieCard movie={movie} key={movie.id} />
+                        <div key={movie.id} className="col-sm-6 col-lg-4 col-xl-3">
+                            <MovieCard movie={movie} />
                         </div>
                     ))}
                 </div>
