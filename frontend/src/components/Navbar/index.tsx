@@ -7,9 +7,9 @@ const Navbar = () => {
             <nav className='container'>
                 <div className='dsmovie-navbar-content'>
                     <a className='dsmovie-navbar-h1' href='/'>DSMovie</a>
-                    <a href='https://github.com/devsuperior/sds-dsmovie/tree/main/episodio1' className='dsmovie-navbar-git'>
+                    <a href='https://github.com/eolliveira/dsmovie' className='dsmovie-navbar-git'>
                         <img src={ImgGitHub} alt="teste" />
-                        <p>/devesuperior</p>
+                        <p>/eolliveira</p>
                     </a>
                 </div>
             </nav>
