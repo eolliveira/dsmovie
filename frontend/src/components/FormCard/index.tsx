@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Movie } from 'types/movie';
 import { BASE_URL } from 'utils/Requests';
 import './styles.css';
@@ -11,15 +11,15 @@ type Props = {
 
 const FormCard = ({ movieId }: Props) => {
 
+    const navigate = useNavigate(); 
+
     const [movie, setMovie] = useState<Movie>();
 
     useEffect(() => {
         axios.get(`${BASE_URL}/movies/${movieId}`)
-            .then((response) => {
-                setMovie(response.data);
-            })
+            .then((response) => setMovie(response.data))
             .catch((error) => {
-                console.log(`Não foi possivel obter obter dados do filme: ${error}`);
+                console.log(`Não foi possivel obter obter dados do filme ${error}`);
             });
     }, [movieId]);
 
@@ -34,8 +34,9 @@ const FormCard = ({ movieId }: Props) => {
             email: inpEmail,
             score: inpScore
         })
+            .then(() => navigate('/'))
             .catch((error) => {
-                console.log(`Não foi possivel obter obter dados do filme: ${error}`);
+                console.log(`Não foi possivel avaliar o filme! ${error}`);
             });
     }
 
